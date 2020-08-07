@@ -172,7 +172,7 @@ ratesubmitbtn.addEventListener('click',()=>{
    favcall(); 
 });
 
-// Remove User List {Remove from list not working properly on deletion need to be checked}
+// Remove User List 
 detcont.addEventListener('click',(e)=>{
   if(e.target.className=='removelist'){
     let imdbid=e.target.parentElement.childNodes[3].innerText;
