@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Ubuntu:wght@500&display=swap');
+
+body{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Staatliches', cursive;
+  background-image: linear-gradient(to right top, #f2f2f2, #e5e5e5, #d8d8d8, #cccccc, #bfbfbf);
+  overflow-x: hidden;
+  position: relative;
+}
+.container{
+  min-width: 890px;
+  margin: 0 auto;
+}
+.container2{
+  padding: 1rem;
+  margin: 0 40px;
+  
+}
+h2,p{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+}
+button:focus{
+  outline: 0;
+}
+input:focus{
+  outline: 0;
+}
+/* Navbar */
+.fa-film{
+  color:#164e3e;
+}
+.heading{
+  font-size: large;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  background-color:#D92332;
+  color: rgb(8, 8, 8);
+  /* position: fixed;
+  z-index: 10; */
+}
+
+.inputContainer{
+width: 600px;
+}
+.inputContainer .inputsearch{
+  width: 78%;
+  padding: 10px;
+  border-radius:3px;
+  border: none;
+  
+}
+.serachbtn{
+  border: none;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.serachbtn:hover{
+  background-color: whitesmoke;
+  color: black;
+  transition: all ease 0.7s;
+}
+.serachbtn:focus{
+  outline: 0;
+}
+.socialcontainer{
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  text-align: center;
+}
+.socialcontainer li{
+  margin-left: 8px;
+}
+
+/* Serach Cont */
+.serachContainer{
+  display: none;
+  opacity: 0;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+.serachContainer h3{
+border-bottom: 2px black solid;
+margin: 0;
+}
+.serachContainer .closedetail{
+  position:absolute;
+  top: 30px;
+  right:20px;
+  background-color: red;
+  border: none;
+  position: absolute;
+  padding: 5px 8px;
+  color: white;
+  cursor: pointer;
+}
+.serachContainer .closedetail:hover{
+  background-color: rgba(223, 78, 78, 0.5);
+}
+.serachContainer .searchlist{
+  display: flex;
+}
+.searchlist img{
+  width: 208px;
+}
+
+.searchItem{
+  list-style-type: none;
+}
+.searchlistitems{
+  padding: 1rem;
+}
+.searchlistitems h2{
+  font-size: 30px;
+}
+.searchlistitems h5{
+  font-size: large;
+}
+.innerid{
+  display: none;
+}
+.addListbtn{
+  border: none;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.addListbtn:hover{
+  background-color: #ebe5e5;
+  color: black;
+  transition: all ease-in 0.4s;
+}
+
+/* Popular container */
+.popularContainer h2{
+  border-bottom: black 2px solid;
+}
+.sec1,.sec2,.sec3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper img{
+  width:215px;
+}
+.favid{
+  display: none;
+}
+.wrapper .item h3{
+  margin:0;
+}
+
+/* Favourites */
+.favContainer h2{
+  text-decoration: underline;
+  text-underline-position: under;
+  margin-bottom: 10px;
+}
+.favitems{
+  display: grid;
+  grid-template-columns: repeat(9,130px);
+  align-items: center;
+  grid-gap:20px;
+}
+.favitems img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.favourites{
+  cursor: pointer;
+}
+.favourites h3{
+  margin:0;
+}
+
+
+
+/* Detail Display */
+.detailContainer{
+  position: absolute;
+  height: 100vh;
+  width:100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+}
+.detailContainer .detailer{
+  min-width: 1200px;
+  height: 400px;
+  background-image: linear-gradient(to bottom, #f2b544, #e7cf7f, #dfdb9c, #e7e9e1, #f1f2f0);
+  border-radius: 20px;
+  box-shadow: -2px -1px 53px 24px #525847;
+  animation: search 0.5s linear forwards;
+  padding: 1rem;
+  line-height: 1.7rem;
+  position: relative;
+}
+.detailer .closedetail{
+  background-color: red;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+.detail_items{
+ display: flex;
+}
+.detail_items > div {
+  margin-right: 10px;
+}
+.detail_items h5{
+  font-size: large;
+  margin: 15px 0;
+}
+.detail_items p{
+  margin: 10px 0;
+  font-size: large;
+}
+.detail_items .plot{
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.detail_items img{
+  width:220px;
+  border-radius: 5px;
+}
+.detail_items .extras{
+  background-color: rgba(128,128,128,0.7);
+  padding: 7px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+  border-radius: 3px;
+}
+.detail_items .extras>span{
+  background-color: rgba(19, 17, 17, 0.7);
+  padding: 5px;
+  border-radius: 2px;
+  color: rgb(134, 130, 130);
+}
+.detail_items .socialratings{
+  background-color: rgba(128,128,128,0.2);
+  display: flex;
+  width: 350px;
+  align-items: center;
+  justify-content:space-evenly;
+  padding: 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 70px;
+  right: 310px;
+}
+.detail_items .socialratings .social{
+  background-color:rgba(19, 17, 17, 0.7);
+  color:rgb(134, 130, 130);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  border-radius: 2px;
+}
+.transferid{
+  display: none;
+}
+/* Ratings */
+.ratings{
+  position: relative;
+}
+.progressCont{
+  position: absolute;
+  background-color:rgba(128,128,128,0.7);
+  padding: 10px;
+  border-radius: 2px;
+  bottom: 20px;
+  right: 50px;
+  text-align: center;
+}
+.progressCont h3{
+  margin: 0;
+}
+
+.progress{
+  width:100%;
+  cursor: pointer;
+  background: #e94242;
+  outline: none;
+  opacity: 0.5; 
+  transition: opacity .2s;
+}
+.progress:hover{
+ opacity: 1;
+}
+.ratesubmit{
+  border: none;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+  width: 85%;
+}
+.ratesubmit:focus{
+  outline: 0;
+}
+.ratesubmit:hover{
+  background-color: rgb(241, 236, 236);
+  color: black;
+  transition: all ease 0.5s;
+}
+.removelist{
+  border: none;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  bottom: 27px;
+  right: 352px;
+  z-index: 10;
+  width: 170px;
+  display: none;
+}
+.removelist:hover{
+  background-color: rgb(235, 10, 10);
+  color: black;
+  transition: all ease 0.5s;
+}
+
+
+@keyframes search{
+  0%{opacity: 0;}
+  50%{opacity: 0.5;}
+  100%{opacity: 1;}
+}

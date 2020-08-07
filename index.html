@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4f0345ee3d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./courosel.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Movie Rater</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="container">
+
+  <nav id="navbar" class="navbar">
+   
+    <div class="heading"><h2><a href="./index.html"><i class="fas fa-film"></i>&nbsp;Movie Rater</a></h2></div>
+    
+    <form class="inputContainer" id="inputContainer">
+    <input type="text" placeholder="Plesae search for Movies/TV series" id="inputsearch" class="inputsearch">
+    <button class="serachbtn" id="searchbtn">Search</button>
+    </form>
+    
+    <div class="social">
+     <ul class="socialcontainer">
+       <li><i class="fab fa-twitter fa-2x"></i></li>
+       <li><i class="fab fa-facebook fa-2x"></i></li>
+       <li><i class="fab fa-youtube fa-2x"></i></li>
+     </ul>
+    </div>
+
+  </nav>
+  
+  <div class="container2" id="container2">
+  <!-- SEARCH CONTAINER -->
+  <section class="serachContainer" id="searchContainer">
+    <h3>Search Result:</h3>
+    <ul class="searchItem" id="searchItem"></ul>
+    <button class="closedetail" id="searchclose">X</button>
+  </section>
+
+  <!-- POPULAR NOW -->
+  <section class="popularContainer" id="popularContainer">
+    <h2>Popular Title Right NOW...</h2>
+    <div class="wrapper">
+      <section id="section1">
+        <a href="#section3">‹</a>
+        <div class="sec1">
+        </div>
+        <a href="#section3">›</a>
+      </section>
+      <section id="section2">
+      <a href="#section1">‹</a>
+        <div class="sec2">
+        </div>
+      <a href="#section3">›</a>
+      </section>
+      <section id="section3">
+      <a href="#section2">‹</a>
+        <div class="sec3">
+        </div>
+      <a href="#section1">›</a>
+      </section>
+    </div>
+  </section>
+   
+  <!-- MY FAV -->
+  <section class="favContainer" id="favContainer">
+    <h2>My List</h2>
+    <div class="favitems" id="favitems"></div>
+
+  </section>
+
+  <!-- Detail Display -->
+  <section class="detailContainer" id="detailContainer">
+    <div class="detailer" id="detailer">
+      <button class="closedetail" id="closedetail">X</button>
+     <div class="details" id="details">
+      
+     </div>
+     
+     
+     <div class="reviewSect">
+      <div class="ratings" id="ratings">
+        <div class="star-ratings-css">
+          <div class="star-ratings-css-top"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        </div>
+      </div>
+      <div class="progressCont" id="progressCont">
+        <div>
+        <h3>Provide your Movie Rating %</h3>
+          <input type="range" min="1" max="100" value="50" class="progress" id="myRange">
+        </div>
+        <div>
+          <button class="ratesubmit" id="ratesubmit">Add Rating/Add to List</button>
+        </div>
+      </div>
+     </div>
+
+
+    </div>
+    
+  </section>
+
+  </div>
+  </div>
+  
+  <script type="module" src="./app.js"></script>
+  <script type="module" src="./add.js"></script>
+</body>
+</html>
